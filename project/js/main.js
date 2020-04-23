@@ -48,7 +48,7 @@ formBtn.onclick = function(){
 		if (error == false) {
 	 		$(sendModal).modal("hide");
 	 		$.ajax({
-	 			url: 'send.php',
+	 			url: 'check.php',
 	 			type: 'post',
 	 			cache: false,
 	 			data:{
@@ -64,6 +64,7 @@ formBtn.onclick = function(){
 	 			},
 	 			success: function(data){
 	 				$(formBtn).prop("disabled", false);
+	 				// $(form).trigger('reset');
 	 				if (data == 1) {
 	 					message('результат', 'успешно');
 	 				}
@@ -84,6 +85,6 @@ function message(title, body){
 	let myModal = document.querySelector('#myModal');
 	let modal_title = myModal.querySelector('.modal-title').innerHTML = title;
 	let modal_body = myModal.querySelector('.modal-body').innerHTML = body;
-	$("#myModal").modal("show");
+	$(myModal).modal("show");
 }
 
