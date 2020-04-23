@@ -1,12 +1,12 @@
 <?php 
 	require 'add_db.php';
 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$AskAge = $_POST['AskAge'];
+	$name       = $_POST['name'];
+	$email      = $_POST['email'];
 	$AskClothes = $_POST['AskClothes'];
-	$AskTrends = $_POST['AskTrends'];
-	$error = false;
+	$AskAge     = $_POST['AskAge'];
+	$AskTrends  = $_POST['AskTrends'];
+	$error      = false;
 
 
 	if ($AskAge != 'Чистый классический стиль') {

@@ -4,18 +4,13 @@ let formBtn = document.querySelector('.form-btn');
 
 formBtn.onclick = function(){
 
- 	let error = false
+ 	let error        = false
 	const AskAge     = form.age.value;
 	const AskClothes = form.clothes.value;
 	const AskTrends  = form.trends.value;
 
 	if (AskAge == '' || AskClothes == '' || AskTrends == '') {
- 		error = true;
-	}
-
-	if (error == true) {
 		message('ошибка', 'ответьте на все вопросы');
-
 	}
 	else{
 		$("#exampleModalCenter").modal("show");
@@ -69,7 +64,6 @@ formBtn.onclick = function(){
 	 			},
 	 			success: function(data){
 	 				$(formBtn).prop("disabled", false);
-	 				console.log(data);
 	 				if (data == 1) {
 	 					message('результат', 'успешно');
 	 				}
